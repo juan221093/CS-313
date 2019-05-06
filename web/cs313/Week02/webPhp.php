@@ -1,4 +1,4 @@
-// set default timezone
+<!-- Made by Juan Alvarez -->
 
 <?php
 date_default_timezone_set("America/Boise");

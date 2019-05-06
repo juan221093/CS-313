@@ -1,4 +1,4 @@
-<!-- Made by Juan Alvare -->
+<!-- Made by Juan Alvarez -->
 <!DOCTYPE html>
 <html>
    <head>
