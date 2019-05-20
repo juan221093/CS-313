@@ -17,14 +17,14 @@ CREATE TABLE package (
 INSERT INTO package (
 
     [city],[num_days],[num_nights],[num_people],[total_price]
-    values ('Satan Cruz',5,4,2, 900);
+    values ('Santa Cruz',5,4,2, 900);
 
 );
 
 INSERT INTO package (
 
     [city],[num_days],[num_nights],[num_people],[total_price]
-    values ('Satan Cruz',4,3,2, 750);
+    values ('Santa Cruz',4,3,2, 750);
 
 );
 
