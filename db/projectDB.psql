@@ -1,0 +1,52 @@
+CREATE DATABASE projectDB;
+
+
+\c projectDB
+
+# This Is the Table for the Packages of the tours depending
+# on the City they will want to pick
+
+CREATE TABLE package (
+    city             varchar(80),
+    num_days         int,           -- Number of Days
+    num_nights       int,           -- Number of Nights
+    num_people       int,           -- Number of People
+    total_price      int,           -- Total of Package
+);
+
+INSERT INTO package (
+
+    [city],[num_days],[num_nights],[num_people],[total_price]
+    values ('Satan Cruz',5,4,2, 900);
+
+);
+
+INSERT INTO package (
+
+    [city],[num_days],[num_nights],[num_people],[total_price]
+    values ('Satan Cruz',4,3,2, 750);
+
+);
+
+INSERT INTO package (
+
+    [city],[num_days],[num_nights],[num_people],[total_price]
+    values ('Isabela',5,4,2, 1200);
+
+);
+
+NSERT INTO package (
+
+    [city],[num_days],[num_nights],[num_people],[total_price]
+    values ('Isabela',4,3,2,1000);
+
+);
+
+CREATE TABLE public.user
+(
+	id SERIAL NOT NULL PRIMARY KEY,
+	username VARCHAR(50) NOT NULL UNIQUE,
+	password VARCHAR(50) NOT NULL,
+	display_name VARCHAR(50) NOT NULL
+);
+
