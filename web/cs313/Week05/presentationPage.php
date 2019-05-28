@@ -1,10 +1,3 @@
-<?php
-
-require "dbConnect.php";
-$db = get_db();
-
-?>
-
 <!-- Made by Juan Alvarez -->
 <!DOCTYPE html>
 <html>
@@ -89,7 +82,7 @@ $conn->close();
 
               
 
-              ?>
+ ?>
 
 <ul>
   <li><a class="menu" href="#home">Home</a></li>
