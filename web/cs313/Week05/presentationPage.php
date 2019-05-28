@@ -44,8 +44,8 @@ catch (PDOException $ex)
 
 <?php 
               
-// sql to create table
- $sql = "INSERT INTO packages (city,num_days,num_nights,num_people,total_price)
+// sql to create table  
+ /*$sql = "INSERT INTO packages (city,num_days,num_nights,num_people,total_price)
  VALUES ('Santa Cruz',5,4,2, 900)";
        
 if ($conn->query($sql) === TRUE) {
@@ -87,7 +87,7 @@ if ($conn->query($sql) === TRUE) {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-$conn->close(); 
+$conn->close(); */
 
 $statement = $db->prepare("SELECT city,num_days,num_nights,num_people,total_price FROM packages");
 $statement->execute();
@@ -101,7 +101,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
     $people = $row['num_people'];
     $price = $row['price'];
 
-    echo "<p><strong>$city $days $nights </strong> - \"$price\"<p>";
+    echo "<p><strong>$city $days $nights $price </strong>  <p>";
 }
 
  ?>
