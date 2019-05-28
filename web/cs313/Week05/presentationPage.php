@@ -82,7 +82,9 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
     $people = $row['num_people'];
     $price = $row['price'];
 
-	echo "<p><strong>$city $days $nights </strong> - \"$price\"<p>";
+    echo "<p><strong>$city $days $nights </strong> - \"$price\"<p>";
+}
+
  ?>
 
 <ul>
@@ -115,6 +117,5 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
   <img src="footer.jpg" alt="footer" class="footer" >
 </footer>
 
-       
     </body>
 </html>
