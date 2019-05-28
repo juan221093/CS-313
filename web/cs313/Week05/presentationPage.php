@@ -1,7 +1,11 @@
 <?php
 
-require "dBConnect.php";
-$db = get_db();
+
+$dbUser = 'cllstbfnqmjbse';
+$dbPassword = 'c4681ab5380bc2b0c699c714480be54594ab059fcebcc00953699fb4342c82e7';
+$dbName = 'd4uj8uaup6ucv9';
+$dbHost = 'ec2-23-21-186-85.compute-1.amazonaws.com';
+$dbPort = '5432';
 
 ?>
 
