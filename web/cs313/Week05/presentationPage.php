@@ -7,6 +7,21 @@ $dbName = 'd4uj8uaup6ucv9';
 $dbHost = 'ec2-23-21-186-85.compute-1.amazonaws.com';
 $dbPort = '5432';
 
+try
+{
+	// Create the PDO connection
+	$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+	// this line makes PDO give us an exception when there are problems, and can be very helpful in debugging!
+	$db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+}
+catch (PDOException $ex)
+{
+	// If this were in production, you would not want to echo
+	// the details of the exception.
+	echo "Error connecting to DB. Details: $ex";
+	die();
+}
+
 ?>
 
 <!-- Made by Juan Alvarez -->
