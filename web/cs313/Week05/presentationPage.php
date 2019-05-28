@@ -53,7 +53,7 @@ $sql = "CREATE TABLE packages (
        
        $conn->close();
 
-       $sql = "INSERT INTO package (city,num_days,num_nights,num_people,total_price)
+       $sql = "INSERT INTO packages (city,num_days,num_nights,num_people,total_price)
        VALUES ('Santa Cruz',5,4,2, 900)";
        
 if ($conn->query($sql) === TRUE) {
@@ -64,7 +64,7 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close();
 
-$sql = "INSERT INTO package (city,num_days,num_nights,num_people,total_price)
+$sql = "INSERT INTO packages (city,num_days,num_nights,num_people,total_price)
        VALUES ('Santa Cruz',4,3,2, 750)";
        
 if ($conn->query($sql) === TRUE) {
@@ -75,7 +75,7 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close(); 
 
-$sql = "INSERT INTO package (city,num_days,num_nights,num_people,total_price)
+$sql = "INSERT INTO packages (city,num_days,num_nights,num_people,total_price)
        VALUES ('Isabela',4,3,2, 1000)";
        
 if ($conn->query($sql) === TRUE) {
@@ -86,9 +86,25 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close(); 
 
+$sql = "INSERT INTO packages (city,num_days,num_nights,num_people,total_price)
+       VALUES ('Isabela',5,4,2, 1200)";
+       
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
 
+$conn->close(); 
+
+$sql = 'SELECT * FROM packages';
+$stmt = $pdo->prepare($sql);
+$stmt->excute();
+$rowCount = $stmt->$rowCount();
+$details = $stmt-fetch();
+
+print_r($details);
               
-
  ?>
 
 <ul>
