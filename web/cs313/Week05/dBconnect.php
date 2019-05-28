@@ -6,7 +6,10 @@ function get_db() {
 		// default Heroku Postgres configuration URL
 		$dbUrl = getenv('DATABASE_URL');
 		if (!isset($dbUrl) || empty($dbUrl)) {
-			
+			// example localhost configuration URL with user: "ta_user", password: "ta_pass"
+			// and a database called "projectDB"
+			$dbUrl = "postgres://ta_user:ta_pass@localhost:5432/projectDB";
+
 		}
 		// Get the various parts of the DB Connection from the URL
 		$dbopts = parse_url($dbUrl);
