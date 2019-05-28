@@ -25,36 +25,9 @@ $db = get_db();
 
 <?php 
               
-// Create database
- $sql = "CREATE DATABASE projectDB";
-if ($conn->query($sql) === TRUE) {
-    echo "Database created successfully";
-} else {
-    echo "Error creating database: " . $conn->error;
-}
-
-$conn->close();
-
 // sql to create table
-$sql = "CREATE TABLE packages (
-       id INT(8) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
-       city VARCHAR(80), 
-       num_days int,
-       num_nights int,
-       num_people int,
-       total price int,
-       )";
-       
-       if ($conn->query($sql) === TRUE) {
-           echo "Table MyGuests created successfully";
-       } else {
-           echo "Error creating table: " . $conn->error;
-       }
-       
-       $conn->close();
-
-       $sql = "INSERT INTO packages (city,num_days,num_nights,num_people,total_price)
-       VALUES ('Santa Cruz',5,4,2, 900)";
+ $sql = "INSERT INTO packages (city,num_days,num_nights,num_people,total_price)
+ VALUES ('Santa Cruz',5,4,2, 900)";
        
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
@@ -97,14 +70,19 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close(); 
 
-$sql = 'SELECT * FROM packages';
-$stmt = $pdo->prepare($sql);
-$stmt->excute();
-$rowCount = $stmt->$rowCount();
-$details = $stmt-fetch();
+$statement = $db->prepare("SELECT city,num_days,num_nights,num_people,total_price FROM packages");
+$statement->execute();
+// Go through each result
+while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+{
+	
+	$city = $row['city'];
+	$days = $row['num_days'];
+	$nights = $row['num_nights'];
+    $people = $row['num_people'];
+    $price = $row['price'];
 
-print_r($details);
-              
+	echo "<p><strong>$city $days $nights </strong> - \"$price\"<p>";
  ?>
 
 <ul>
