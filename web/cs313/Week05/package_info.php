@@ -39,7 +39,7 @@ $city = htmlspecialchars($_GET['city']);
 </blockquote>
        <hr>
        <h2>Package Info For City <?php echo $city ?></h2>
-       <div class="introduction"> 
+       <div class="Package Info"> 
        
        <p> Tour To Turtle Sight Spot</p>
        <p> Snorkling Tour</p>

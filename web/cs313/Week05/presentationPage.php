@@ -55,7 +55,7 @@ catch (PDOException $ex)
 </blockquote>
        <hr>
 <h2>Introduction</h2>
-       <div class="Packages">
+       <div class="introduction">
        
        <?php 
 
