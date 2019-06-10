@@ -10,7 +10,7 @@ ul {
 li {
     float: left;
     margin: 0 0 3px 0;
-
+    color: blue;
 }
 
 li a {
@@ -42,7 +42,7 @@ li a:hover {
     width: 70%;
     border: 3px solid #92a39a ;
     padding: 20px;
-    color: blue;
+    color: #656868;
    
 }
 
