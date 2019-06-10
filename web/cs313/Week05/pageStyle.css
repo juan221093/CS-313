@@ -9,12 +9,22 @@ ul {
 
 li {
     float: left;
-    margin: 0 0 3px 0;
-    color: blue;
 }
 
-
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Palatino;
         
+}
+
+li a:hover {
+    background-color: #39CCCC;
+}
+
 .logo {
     display:block;
     margin-left: auto;
@@ -26,7 +36,6 @@ li {
 .introduction {
     font-family: Cardo;
     margin: auto;
-    height: 100%;
     width: 70%;
     border: 3px solid #92a39a ;
     padding: 20px;
@@ -70,24 +79,3 @@ form {
 
 
 
-.ignore-css
-{
-    all:unset;
-}
-
-.menu:hover
-{
-    background-color: #39CCCC;
-
-
-}
-
-.menu {
-    display: block;
-    color:ghostwhite;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-family: Palatino;
-
-}
