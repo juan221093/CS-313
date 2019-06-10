@@ -9,6 +9,8 @@ ul {
 
 li {
     float: left;
+    margin: 0 0 3px 0;
+
 }
 
 li a {
