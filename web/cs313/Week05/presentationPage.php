@@ -75,12 +75,15 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
        $price = $row['total_price'];
 
        ?>
+
+<li style="color:blue">
 <?php 
 
-    echo "<li> $city $days - $nights - $people - $price </li>";
+    echo  $city - $days - $nights - $people - $price;
 }
 
  ?>
+ </li>
    </div>
        
      <hr>
