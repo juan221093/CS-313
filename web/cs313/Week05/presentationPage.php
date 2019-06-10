@@ -59,6 +59,8 @@ catch (PDOException $ex)
        
        <?php 
 
+include 'CSS/pageStyle.css';
+
 $statement = $db->prepare("SELECT city,num_days,num_nights,num_people,total_price FROM packages");
 $statement->execute();
 // Go through each result
