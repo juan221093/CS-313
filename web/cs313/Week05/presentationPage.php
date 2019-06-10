@@ -43,51 +43,6 @@ catch (PDOException $ex)
    <body>
 
 <?php 
-              
-// sql to create table  
- /*$sql = "INSERT INTO packages (city,num_days,num_nights,num_people,total_price)
- VALUES ('Santa Cruz',5,4,2, 900)";
-       
-if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
-
-$conn->close();
-
-$sql = "INSERT INTO packages (city,num_days,num_nights,num_people,total_price)
-       VALUES ('Santa Cruz',4,3,2, 750)";
-       
-if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
-
-$conn->close(); 
-
-$sql = "INSERT INTO packages (city,num_days,num_nights,num_people,total_price)
-       VALUES ('Isabela',4,3,2, 1000)";
-       
-if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
-
-$conn->close(); 
-
-$sql = "INSERT INTO packages (city,num_days,num_nights,num_people,total_price)
-       VALUES ('Isabela',5,4,2, 1200)";
-       
-if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
-
-$conn->close(); */
 
 $statement = $db->prepare("SELECT city,num_days,num_nights,num_people,total_price FROM packages");
 $statement->execute();
@@ -99,9 +54,9 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	$days = $row['num_days'];
 	$nights = $row['num_nights'];
     $people = $row['num_people'];
-    $price = $row['price'];
+    $price = $row['total_price'];
 
-    echo "<p><strong>$city $days $nights $price </strong>  <p>";
+    echo "<p><strong>$city $days $nights $people $price </strong>  <p>";
 }
 
  ?>
