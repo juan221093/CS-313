@@ -84,8 +84,9 @@ form {
 
 .menu {
     display: block;
-    color: white;
+    color:ghostwhite;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-family: Palatino;
+}

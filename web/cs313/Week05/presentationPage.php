@@ -35,7 +35,6 @@ catch (PDOException $ex)
   /* document level styles */
        body {background-color: #ccdfc8}
        h1 {color: #656868; font-style: italic; text-align: center;}
-       a {color:ghostwhite}
        h2 {color: #656868; font-style: italic; text-align: center}
        
 
