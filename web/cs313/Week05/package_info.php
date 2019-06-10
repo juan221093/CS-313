@@ -41,13 +41,12 @@ $city = htmlspecialchars($_GET['city']);
        <h2>Package Info For City <?php echo $city; ?></h2>
        <div class="introduction"> 
        
-<li class="description">
-       <p> Tour To Turtle Sight Spot</p>
-       <p> Snorkling Tour</p>
-       <p> Volcano Hiking Tour</p>
-       <p> Meals Included</p>
-       <p> Lodging Included</p>
-</li>
+
+       <p class="description"> Tour To Turtle Sight Spot</p>
+       <p class="description"> Snorkling Tour</p>
+       <p class="description"> Volcano Hiking Tour</p>
+       <p class="description"> Meals Included</p>
+       <p class="description"> Lodging Included</p>
        
        </div>
      <hr>
