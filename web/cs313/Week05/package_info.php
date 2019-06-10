@@ -13,7 +13,7 @@ $city = htmlspecialchars($_GET['city']);
 <html>
    <head>
     <link rel="stylesheet" href="pageStyle.css">
-    <title>Presentation Page</title>
+    <title>Package Info</title>
    <style>
   
   /* document level styles */
@@ -38,7 +38,7 @@ $city = htmlspecialchars($_GET['city']);
 “Man cannot discover new oceans unless he has the courage to lose sight of the shore.” – Andre Gide
 </blockquote>
        <hr>
-       <h2>Package Info For City <?php echo $city ?></h2>
+       <h2>Package Info For City <?php echo $city; ?></h2>
        <div class="introduction"> 
        
        <p> Tour To Turtle Sight Spot</p>
