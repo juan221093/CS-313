@@ -13,12 +13,16 @@ li {
 
 li a {
     display: inline;
-    color: #656868;
+    color: #39CCCC;
     text-align: center;
     padding: 0x 10px;
     text-decoration: none;
     font-family: Palatino;
         
+}
+
+li a:hover {
+    color: whitesmoke;
 }
 .menu {
     display: block;
