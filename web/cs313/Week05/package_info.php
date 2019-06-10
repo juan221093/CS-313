@@ -26,9 +26,9 @@ $city = htmlspecialchars($_GET['city']);
     </head>
    <body>
 
-<ul class="menu">
-  <li><a href="#home">Home</a></li>
-  <li><a href="index.php">CS 313 Assignments</a></li>
+<ul>
+  <li><a class="menu" href="#home">Home</a></li>
+  <li><a class="menu" href="index.php">CS 313 Assignments</a></li>
   
 </ul>
        <hr>
