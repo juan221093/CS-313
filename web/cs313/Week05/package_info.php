@@ -1,5 +1,5 @@
 <?php
-if (!isset($_GET['city']))
+if (!isset($_GET['package_id']))
 {
     die("ERROR, CITY NOT DECLARED...");
 
@@ -39,7 +39,7 @@ $city = htmlspecialchars($_GET['city']);
 </blockquote>
        <hr>
        <h2>Package Info For City <?php echo $city ?></h2>
-       <div class="Package Info"> 
+       <div class="introduction"> 
        
        <p> Tour To Turtle Sight Spot</p>
        <p> Snorkling Tour</p>
