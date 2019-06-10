@@ -76,10 +76,10 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 
        ?>
 
-<li style="color:blue">
+<p style="color:blue">
 <?php 
 
-    echo  $city - $days - $nights - $people - $price;
+    echo "$city - $days - $nights - $people - $price";
 }
 
  ?>
