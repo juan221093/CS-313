@@ -29,7 +29,7 @@ catch (PDOException $ex)
 <html>
    <head>
     <link rel="stylesheet" href="pageStyle.css">
-    <title>Presentation Page</title>
+    <title>Package Info</title>
    <style>
   
   /* document level styles */
@@ -56,7 +56,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
     $people = $row['num_people'];
     $price = $row['total_price'];
 
-    echo "<p><strong>$city $days $nights $people $price </strong>  <p>";
+    echo "<p><strong> <a href='package_info.php?package_id=$city'$city $days $nights $people $price</a> </strong>  <p>";
 }
 
  ?>

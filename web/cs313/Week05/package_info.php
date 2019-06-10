@@ -1,3 +1,13 @@
+<?php
+if (!isset($_GET['city']))
+{
+    die("ERROR, CITY NOT DECLARED...");
+
+}
+$city = htmlspecialchars($_GET['city']);
+
+?>
+
 <!-- Made by Juan Alvarez -->
 <!DOCTYPE html>
 <html>
@@ -28,12 +38,16 @@
 “Man cannot discover new oceans unless he has the courage to lose sight of the shore.” – Andre Gide
 </blockquote>
        <hr>
-<h2>Introduction</h2>
-       <div class="introduction"> I am in the project of creating a Travel Agency
-              so I figure that this class can help me move forward with it by 
-              little tools for it. My name is Juan Alvarez, I am from Ecuador,
-              and I currently reside in Rexburg, Idaho with my wife.</div>
+       <h2>Package Info For City <?php echo $city ?></h2>
+       <div class="introduction"> 
        
+       <p> Tour To Turtle Sight Spot</p>
+       <p> Snorkling Tour</p>
+       <p> Volcano Hiking Tour</p>
+       <p> Meals Included</p>
+       <p> Lodging Included</p>
+       
+       </div>
      <hr>
        
   <h2 class="landscapes">What's Next?</h2> 
@@ -46,6 +60,5 @@
   <img src="footer.jpg" alt="footer" class="footer" >
 </footer>
 
-       
     </body>
 </html>
