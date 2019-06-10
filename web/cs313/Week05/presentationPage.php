@@ -31,12 +31,15 @@ catch (PDOException $ex)
     <link rel="stylesheet" href="pageStyle.css">
     <title>Package Info</title>
    <style>
-  
+  <?php 
+         include 'css/pageStyle.css'; 
+    ?>
   /* document level styles */
        body {background-color: #ccdfc8}
        h1 {color: #656868; font-style: italic; text-align: center;}
        a {color:ghostwhite}
        h2 {color: #656868; font-style: italic; text-align: center}
+       
 
 </style>
     </head>
@@ -59,7 +62,7 @@ catch (PDOException $ex)
        
        <?php 
 
-include 'CSS/pageStyle.css';
+
 
 $statement = $db->prepare("SELECT city,num_days,num_nights,num_people,total_price FROM packages");
 $statement->execute();
