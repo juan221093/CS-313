@@ -15,12 +15,6 @@ li {
 
 
         
-}
-
-li a:hover {
-    background-color: whitesmoke;
-}
-
 .logo {
     display:block;
     margin-left: auto;
