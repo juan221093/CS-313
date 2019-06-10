@@ -1,18 +1,3 @@
-ul {
-    list-style-type: none;
-    border: 1px solid #656868;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #656868;
-}
-
-li {
-    float: left;
-    margin: 0 0 3px 0;
-    color: blue;
-}
-
 
         
 .logo {
@@ -83,6 +68,12 @@ form {
 }
 
 .menu {
+    list-style-type: none;
+    border: 1px solid #656868;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #656868;
     display: block;
     color:ghostwhite;
     text-align: center;
