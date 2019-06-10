@@ -62,7 +62,7 @@ catch (PDOException $ex)
 $statement = $db->prepare("SELECT city,num_days,num_nights,num_people,total_price FROM packages");
 $statement->execute();
 // Go through each result
-while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+foreach ($packages as $row)
 {
 	
 	$city = $row['city'];
