@@ -42,25 +42,6 @@ catch (PDOException $ex)
     </head>
    <body>
 
-<?php 
-
-$statement = $db->prepare("SELECT city,num_days,num_nights,num_people,total_price FROM packages");
-$statement->execute();
-// Go through each result
-while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-{
-	
-	$city = $row['city'];
-	$days = $row['num_days'];
-	$nights = $row['num_nights'];
-    $people = $row['num_people'];
-    $price = $row['total_price'];
-
-    echo "<p><strong> <a href='package_info.php?package_id=$city'$city $days $nights $people $price</a> </strong>  <p>";
-}
-
- ?>
-
 <ul>
   <li><a class="menu" href="#home">Home</a></li>
   <li><a href="index.php">CS 313 Assignments</a></li>
@@ -74,10 +55,29 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 </blockquote>
        <hr>
 <h2>Introduction</h2>
-       <div class="introduction"> I am in the project of creating a Travel Agency
-              so I figure that this class can help me move forward with it by 
-              little tools for it. My name is Juan Alvarez, I am from Ecuador,
-              and I currently reside in Rexburg, Idaho with my wife.</div>
+       <div class="introduction">
+       
+       <?php 
+
+$statement = $db->prepare("SELECT city,num_days,num_nights,num_people,total_price FROM packages");
+$statement->execute();
+// Go through each result
+while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+{
+	
+	$city = $row['city'];
+	$days = $row['num_days'];
+	$nights = $row['num_nights'];
+       $people = $row['num_people'];
+       $price = $row['total_price'];
+
+    echo "<p><strong> <a href='package_info.php?package_id=$city'$city $days $nights $people $price</a> </strong>  <p>";
+}
+
+ ?>
+       
+       
+        </div>
        
      <hr>
        
