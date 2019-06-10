@@ -13,9 +13,9 @@ li {
 
 li a {
     display: inline;
-    color: #39CCCC;
+    color: rgb(75, 117, 117);
     text-align: center;
-    padding: -10x 10px;
+    padding: -20x 10px;
     text-decoration: none;
     font-family: Palatino;
         
