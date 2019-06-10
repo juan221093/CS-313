@@ -43,8 +43,8 @@ catch (PDOException $ex)
     </head>
    <body>
 
-<ul>
-  <li><a class="menu" href="#home">Home</a></li>
+<ul class="menu">
+  <li><a href="#home">Home</a></li>
   <li><a href="index.php">CS 313 Assignments</a></li>
   
 </ul>

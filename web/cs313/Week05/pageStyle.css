@@ -13,18 +13,12 @@ li {
     color: blue;
 }
 
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-family: Palatino;
+
         
 }
 
 li a:hover {
-    background-color: #39CCCC;
+    background-color: whitesmoke;
 }
 
 .logo {
@@ -86,3 +80,18 @@ form {
 {
     all:unset;
 }
+
+.menu:hover
+{
+    background-color: #39CCCC;
+
+
+}
+
+.menu {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Palatino;
