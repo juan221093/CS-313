@@ -71,7 +71,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
        $people = $row['num_people'];
        $price = $row['total_price'];
 
-    echo "<li><p><a href='package_info.php?package_id=$city' $city - $days - $nights - $people - $price </a></p></li>";
+    echo "<li><p> $city - $days - $nights - $people - $price </p></li>";
 }
 
  ?>
