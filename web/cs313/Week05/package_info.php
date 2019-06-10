@@ -4,7 +4,7 @@ if (!isset($_GET['package_id']))
     die("ERROR, CITY NOT DECLARED...");
 
 }
-$city = htmlspecialchars($_GET['city']);
+$city = htmlspecialchars($_GET['package_id']);
 
 ?>
 
