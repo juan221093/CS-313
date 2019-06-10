@@ -55,7 +55,7 @@ catch (PDOException $ex)
 </blockquote>
        <hr>
 <h2>Introduction</h2>
-       <div class="introduction">
+       <div class="Packages">
        
        <?php 
 
@@ -71,7 +71,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
        $people = $row['num_people'];
        $price = $row['total_price'];
 
-    echo "<p><strong> $city $days $nights $people $price </strong>  <p>";
+    echo "<p><strong> <a href='package_info.php?package_id=$city' $city $days $nights $people $price </a> </strong>  <p>";
 }
 
  ?>
