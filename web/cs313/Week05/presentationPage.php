@@ -1,27 +1,12 @@
 <?php
 
+require('dBconnect.php');
+$db = get_db();
 
-$dbUser = 'cllstbfnqmjbse';
-$dbPassword = 'c4681ab5380bc2b0c699c714480be54594ab059fcebcc00953699fb4342c82e7';
-$dbName = 'd4uj8uaup6ucv9';
-$dbHost = 'ec2-23-21-186-85.compute-1.amazonaws.com';
-$dbPort = '5432';
-
-try
-{
-	// Create the PDO connection
-	$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-	// this line makes PDO give us an exception when there are problems, and can be very helpful in debugging!
-	$db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-}
-catch (PDOException $ex)
-{
-	// If this were in production, you would not want to echo
-	// the details of the exception.
-	echo "Error connecting to DB. Details: $ex";
-	die();
-}
-
+$query = 'SELECT city,num_days,num_nights,num_people,total_price FROM packages';
+$stmt = $db->prepare($query);
+$stmt->execute();
+$packages = $stmt->fetchALL(PDO::FETCH_ASSOC);
 ?>
 
 <!-- Made by Juan Alvarez -->
@@ -59,8 +44,7 @@ catch (PDOException $ex)
        
        <?php 
 
-$statement = $db->prepare("SELECT city,num_days,num_nights,num_people,total_price FROM packages");
-$statement->execute();
+
 // Go through each result
 foreach ($packages as $row)
 {
