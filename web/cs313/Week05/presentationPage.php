@@ -76,7 +76,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 
        ?>
 
-<p style="color:blue">
+<li style="color:blue">
 <?php 
 
     echo "$city - $days - $nights - $people - $price";
