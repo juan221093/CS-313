@@ -11,7 +11,7 @@ li {
     float: left;
 }
 
-li a {
+.menu {
     display: block;
     color: white;
     text-align: center;
@@ -21,7 +21,7 @@ li a {
         
 }
 
-li a:hover {
+.menu:hover {
     background-color: #39CCCC;
 }
 
@@ -76,6 +76,3 @@ form {
     width: 75%;
     margin-top: 6px;
 }
-
-
-
