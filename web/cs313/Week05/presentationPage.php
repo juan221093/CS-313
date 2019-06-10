@@ -60,7 +60,6 @@ catch (PDOException $ex)
        
        <?php 
 
-echo '<style media="screen" type="text/css"> li < </style>';
 
 $statement = $db->prepare("SELECT city,num_days,num_nights,num_people,total_price FROM packages");
 $statement->execute();
