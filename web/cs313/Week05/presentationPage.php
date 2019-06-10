@@ -71,7 +71,11 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
        $people = $row['num_people'];
        $price = $row['total_price'];
 
-    echo "<li><p> $city - $days - $nights - $people - $price </p></li>";
+    echo "<li> <p> $city </p> 
+               <p> $days</p>
+               <p> $nights</p>
+               <p> $people</p>
+               <p> $price </p> </li>";
 }
 
  ?>
