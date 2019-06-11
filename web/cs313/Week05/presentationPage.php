@@ -60,7 +60,7 @@ catch (PDOException $ex)
        <?php 
 
 
-$statement = $db->prepare("SELECT city,num_days,num_nights,num_people,total_price FROM packages");
+$statement = $db->prepare("SELECT city,num_days,num_nights,num_people,total_price, package_id FROM packages");
 $statement->execute();
 // Go through each result
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
@@ -71,13 +71,14 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 	$nights = $row['num_nights'];
        $people = $row['num_people'];
        $price = $row['total_price'];
+       $id = $row['package_id'];
 
        ?>
 
 <li style="color:#656868; padding: 0px 10px; height: -1000px;">
 <?php 
 
-    echo "<a href='package_info.php?package_id=$city'>$city - $days - $nights - $people - $price</a>";
+    echo "<a href='package_info.php?package_id=$id'>$city - $days - $nights - $people - $price</a>";
 }
 
  ?>
