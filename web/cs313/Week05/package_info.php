@@ -37,7 +37,7 @@ $city = htmlspecialchars($_GET['package_id']);
        <blockquote style= "color: #92a39a; font-style: italic; text-align: center; font-family: Garamond;">
 “Man cannot discover new oceans unless he has the courage to lose sight of the shore.” – Andre Gide
 </blockquote>
-       <hr> =
+       <hr> 
        <h2>Package Info For City <?php echo $city; ?></h2>
        <div class="introduction"> 
        
