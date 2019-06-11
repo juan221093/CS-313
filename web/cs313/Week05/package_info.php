@@ -6,8 +6,6 @@ if (!isset($_GET['package_id']))
 }
 $city = htmlspecialchars($_GET['package_id']);
 
-
-
 ?>
 
 <!-- Made by Juan Alvarez -->
@@ -42,23 +40,13 @@ $city = htmlspecialchars($_GET['package_id']);
        <hr> 
        <h2>Package Info For City <?php echo $city ;?></h2>
        <div class="introduction"> 
-    
- <?php
-       foreach ($rows as $row)
-{
-    $content = $row['price'];
-       ?>
-
-<li style="color:#656868; padding: 0px 10px; height: -1000px;">
-<?php 
-
-    echo "<p> $content </p>";
-}
-
- ?>
- </li>
-
        
+
+       <p class="description"> Tour To Turtle Sight Spot</p>
+       <p class="description"> Snorkling Tour</p>
+       <p class="description"> Volcano Hiking Tour</p>
+       <p class="description"> Meals Included</p>
+       <p class="description"> Lodging Included</p>
        
        </div>
      <hr>
