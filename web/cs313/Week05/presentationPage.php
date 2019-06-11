@@ -78,7 +78,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 <li style="color:#656868; padding: 0px 10px; height: -1000px;">
 <?php 
 
-    echo "<a href='package_info.php?package_id=$city$days$nights$people$price'>$city - $days - $nights - $people - $price</a>";
+    echo "<a href='package_info.php?package_id=$city'days_id=$days'nights_id =$nights'people_id=$people'price_id=$price'>$city - $days - $nights - $people - $price</a>";
 }
 
  ?>
