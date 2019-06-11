@@ -7,10 +7,7 @@ if (!isset($_GET['package_id']))
 $city = htmlspecialchars($_GET['package_id']);
 
 
-$stmt = $db->prepare('SELECT * FROM package');
-$stmt->bindValue(':id', $city, PDO::PARAM_INT);
-$stmt->execute();
-$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 <!-- Made by Juan Alvarez -->
