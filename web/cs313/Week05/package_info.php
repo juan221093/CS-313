@@ -5,6 +5,13 @@ if (!isset($_GET['package_id']))
 
 }
 $city = htmlspecialchars($_GET['package_id']);
+
+if (!isset($_GET['days_id']))
+{
+    die("ERROR, DAYS NOT DECLARED...");
+
+}
+
 $days = htmlspecialchars($_GET['days_id']);
 
 ?>
