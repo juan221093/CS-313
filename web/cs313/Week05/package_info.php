@@ -5,7 +5,6 @@ if (!isset($_GET['package_id']))
 
 }
 $city = htmlspecialchars($_GET['package_id']);
-$numdays = htmlspecialchars($_GET['num_days']);
 
 ?>
 
