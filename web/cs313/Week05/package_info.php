@@ -5,8 +5,12 @@ if (!isset($_GET['package_id']))
 
 }
 $city = htmlspecialchars($_GET['package_id']);
-$days = htmlspecialchars($_GET['num_days']);
 
+
+$stmt = $db->prepare('SELECT * FROM package WHERE city=package_id');
+$stmt->bindValue(':id', $city, PDO::PARAM_INT);
+$stmt->execute();
+$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!-- Made by Juan Alvarez -->
@@ -39,15 +43,32 @@ $days = htmlspecialchars($_GET['num_days']);
 “Man cannot discover new oceans unless he has the courage to lose sight of the shore.” – Andre Gide
 </blockquote>
        <hr> 
-       <h2>Package Info For City <?php echo $city ;?> <?php echo $days;?> </h2>
+       <h2>Package Info For City <?php echo $city ;?></h2>
        <div class="introduction"> 
-       
+    
+ <?php
+       while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+{
+	
+	    $city = $row['city'];
+	    $days = $row['num_days'];
+	    $nights = $row['num_nights'];
+        $people = $row['num_people'];
+        $price = $row['total_price'];
+        $id = $row['package_id'];
 
-       <p class="description"> Tour To Turtle Sight Spot</p>
-       <p class="description"> Snorkling Tour</p>
-       <p class="description"> Volcano Hiking Tour</p>
-       <p class="description"> Meals Included</p>
-       <p class="description"> Lodging Included</p>
+       ?>
+
+<li style="color:#656868; padding: 0px 10px; height: -1000px;">
+<?php 
+
+    echo "$city'>$city - $days - $nights - $people - $price</a>";
+}
+
+ ?>
+ </li>
+
+       
        
        </div>
      <hr>
