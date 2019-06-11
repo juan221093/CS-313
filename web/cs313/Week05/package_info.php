@@ -5,6 +5,7 @@ if (!isset($_GET['package_id']))
 
 }
 $city = htmlspecialchars($_GET['package_id']);
+$numdays = htmlspecialchars($_GET['num_days']);
 
 ?>
 
@@ -38,7 +39,7 @@ $city = htmlspecialchars($_GET['package_id']);
 “Man cannot discover new oceans unless he has the courage to lose sight of the shore.” – Andre Gide
 </blockquote>
        <hr> 
-       <h2>Package Info For City <?php echo $city; ?></h2>
+       <h2>Package Info For City <?php echo $city - $numdays; ?></h2>
        <div class="introduction"> 
        
 
