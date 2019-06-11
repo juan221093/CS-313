@@ -47,22 +47,15 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
        <div class="introduction"> 
     
  <?php
-       while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+       foreach ($rows as $row)
 {
-	
-	    $city = $row['city'];
-	    $days = $row['num_days'];
-	    $nights = $row['num_nights'];
-        $people = $row['num_people'];
-        $price = $row['total_price'];
-        $id = $row['package_id'];
-
+    $content = $row['price'];
        ?>
 
 <li style="color:#656868; padding: 0px 10px; height: -1000px;">
 <?php 
 
-    echo "$city'>$city - $days - $nights - $people - $price</a>";
+    echo "<p> $content </p>";
 }
 
  ?>
